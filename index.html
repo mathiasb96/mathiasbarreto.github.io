@@ -4,52 +4,133 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mathias A. Barreto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: Georgia, serif;
-      color: #222;
-      background: #fafafa;
-      max-width: 720px;
-      margin: 60px auto;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      background: #f7f7f5;
+      max-width: 740px;
+      margin: 0 auto;
       padding: 0 24px 80px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
-    h1 { font-size: 2rem; margin-bottom: 4px; }
-    h2 { font-size: 1.1rem; font-weight: normal; color: #555; margin-bottom: 24px; }
-    h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em;
-         color: #888; margin: 40px 0 12px; }
-    p { margin-bottom: 12px; }
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 740px;
+      width: 100%;
+      background: #f7f7f5;
+      z-index: 10;
+      padding: 0 24px 20px;
+    }
+    .top-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #1a6bb5, #4fa3e0);
+      margin-bottom: 40px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .ubc-logo {
+      height: 200px;
+      opacity: 0.85;
+    }
+    .profile-photo {
+      height: 280px;
+      width: auto;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
+    h2 { font-size: 1rem; font-weight: 400; color: #666; margin-bottom: 0; }
+    h3 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #999;
+      margin: 48px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    p { margin-bottom: 14px; font-size: 0.97rem; color: #333; }
     a { color: #1a6bb5; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .links { display: flex; gap: 20px; margin-top: 8px; }
-    .links a { font-size: 0.95rem; }
-    .pub { background: #fff; border: 1px solid #e0e0e0; border-radius: 6px;
-           padding: 16px 20px; }
-    .pub .title { font-weight: bold; }
-    .pub .authors { color: #555; font-size: 0.95rem; }
-    .pub .venue { color: #888; font-size: 0.9rem; margin-top: 4px; }
-    hr { border: none; border-top: 1px solid #e0e0e0; margin: 40px 0 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+    .links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #444;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 4px 14px;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .links a:hover {
+      border-color: #1a6bb5;
+      color: #1a6bb5;
+      text-decoration: none;
+    }
+    .pub {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 18px 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .pub .title { font-weight: 600; font-size: 0.97rem; }
+    .pub .authors { color: #666; font-size: 0.9rem; margin-top: 6px; }
+    .pub .venue { color: #999; font-size: 0.85rem; margin-top: 4px; }
   </style>
 </head>
 <body>
 
-  <h1>Mathias A. Barreto</h1>
-  <h2>PhD Student in Mathematics &mdash; University of British Columbia</h2>
+  <div class="sticky-header">
+    <div class="top-bar"></div>
+    <div class="header">
+      <div>
+        <h1>Mathias A. Barreto</h1>
+        <h2>PhD Student in Mathematics <h2>
+        <h2>University of British Columbia</h2>
+        <h2>Vancouver, CA</h2>
+      </div>
+      <img src="PersonalWebsitePicture.jpeg" alt="Mathias Barreto" class="profile-photo" />
+    </div>
 
-  <div class="links">
-    <a href="https://www.linkedin.com/in/mathias-antonio-barreto-conigliaro-394665245/" target="_blank">LinkedIn</a>
-    <a href="https://dais.chbe.ubc.ca/" target="_blank">Lab</a>
-    <a href="https://personal.math.ubc.ca/~loew/" target="_blank">Philip Loewen</a>
-    <a href="https://dais.chbe.ubc.ca/about/" target="_blank">Bushan Gopaluni</a>
-    <a href="mailto:mathias.barreto@math.ubc.ca">Email</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/mathias-antonio-barreto-conigliaro-394665245/" target="_blank">LinkedIn</a>
+      <a href="mailto:mathias.barreto@math.ubc.ca">Email</a>
+    </div>
   </div>
 
   <h3>About me</h3>
   <p>
-    I am a PhD student at UBC under the supervision of Dr. Philip Loewen and Dr. Bushan Gopaluni. My interests lie in control theory, contact models,
-    and machine learning. As part of my program I collaborate with Honeywell Indsutrial Solutions to optimize the manufacture of lithium-ion batteries.
+    I am a PhD student at UBC under the supervision of <a href="https://personal.math.ubc.ca/~loew/" target="_blank">Dr. Philip Loewen</a>
+    and <a href="https://dais.chbe.ubc.ca/about/" target="_blank">Dr. Bushan Gopaluni</a>. My interests include
+    control theory, contact models, and machine learning. In collaboration with 
+    <a href="https://process.honeywell.com/us/en/industries/sheet-manufacturing/lithium-ion-batteries" target="_blank">Honeywell Industrial
+    Solutions</a>, my research aims to optimize the manufacturing process of lithium-ion batteries.
   </p>
+
+  <p>
+    I am a member of UBC's <a href="https://dais.chbe.ubc.ca/" target="_blank">Data Analytics Lab</a> and the
+    <a href="https://www.iam.ubc.ca/" target="_blank">Institute of Applied Mathematics</a>.
+  </p>
+
+  <p>
+    Before my PhD I obtained my Master's at HSE in Moscow, Russia under the supervision of <a href="https://www.hse.ru/en/staff/moreno_franco"
+    target="_blank">Dr. Harold Moreno</a>. There I worked on the Stochastic version of the Bin Packing Problem, a project which was supported
+    by Huawei's Math Modelling Lab.
+  </p>
+
 
   <h3>Publications</h3>
   <div class="pub">
@@ -62,7 +143,13 @@
     <div class="venue">Statistics &amp; Probability Letters, 2025</div>
   </div>
 
-  <hr />
-
+  <script>
+    function updateLayout() {
+      var h = document.querySelector('.sticky-header').offsetHeight;
+      document.body.style.paddingTop = h + 'px';
+    }
+    window.addEventListener('load', updateLayout);
+    window.addEventListener('resize', updateLayout);
+  </script>
 </body>
 </html>
